@@ -1,0 +1,36 @@
+$textColor: #E0E0E0;
+$black-87:rgba(0, 0, 0, 0.87);
+$labelColor: #67D9B7;
+$background: #F8F8F8;
+$btnColor:#6CEEC7;
+$btnHover:#03c98e;
+$activ:#078d65;
+
+@mixin title {
+text-align: center;
+font-size: 19px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+}
+@mixin  fieldText {
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+@mixin selectText  {
+color: #212121;
+font-size: 15px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+  }
+
+  @mixin label{
+    font-size: 11px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+  }
