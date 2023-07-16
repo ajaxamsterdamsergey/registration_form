@@ -25,7 +25,7 @@ export const FormRegistration = () => {
       .then((response) => {
         const sortedCountries = response.data.sort((a, b) =>
           a.name.common.localeCompare(b.name.common)
-        ); // Сортировка по алфавиту
+        );
         const countries = sortedCountries.reduce((acc, country) => {
           acc[country.cca3] = country;
           return acc;
@@ -68,7 +68,7 @@ export const FormRegistration = () => {
   const handleChangeCountry = (event, formik) => {
     const { value } = event.target;
     const selectedCountry = countries[value];
-    if (selectedCountry) {
+    if (selectedCountry && selectedCountry.idd.root && selectedCountry.idd.suffixes[0]) {
       const countryCode = selectedCountry.idd.root + selectedCountry.idd.suffixes[0];
       formik.setFieldValue('phone', countryCode || '');
       formik.setFieldValue('country', value);
